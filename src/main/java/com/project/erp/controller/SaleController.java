@@ -1,9 +1,9 @@
 package com.project.erp.controller;
 
-import com.project.erp.entity.sales.Sale;
-import com.project.erp.entity.sales.SaleStatus;
-import com.project.erp.service.sales.SaleItemDTO;
-import com.project.erp.service.sales.SaleService;
+import com.project.erp.entity.Sale;
+import com.project.erp.service.SaleService;
+import com.project.erp.dto.SaleItemDTO;
+import com.project.erp.enums.SaleStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +12,6 @@ import java.util.List;
 @RequestMapping("/sales")
 public class SaleController {
     private final SaleService saleService;
-
     public SaleController(SaleService saleService) {
         this.saleService = saleService;
     }

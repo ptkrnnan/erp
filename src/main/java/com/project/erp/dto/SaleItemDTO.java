@@ -1,4 +1,4 @@
-package com.project.erp.service.sales;
+package com.project.erp.dto;
 
 import lombok.Data;
 

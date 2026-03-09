@@ -1,8 +1,6 @@
-package com.project.erp.entity.sales;
+package com.project.erp.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.project.erp.entity.Product;
 import jakarta.persistence.*;
 import lombok.Data;
 

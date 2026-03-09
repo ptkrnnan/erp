@@ -1,8 +1,9 @@
 package com.project.erp.controller;
 
 import com.project.erp.entity.Product;
-import org.springframework.web.bind.annotation.*;
 import com.project.erp.service.ProductService;
+import com.project.erp.dto.ProductDTO;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,13 +12,12 @@ import java.util.Optional;
 @RequestMapping ("/products")
 public class ProductController {
     private final ProductService productService;
-
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
+    public Product createProduct(@RequestBody ProductDTO product) {
         return productService.createProduct(product);
     }
 
@@ -32,7 +32,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
+    public Product updateProduct(@PathVariable Long id, @RequestBody ProductDTO product) {
         return productService.updateProduct(id, product);
     }
 

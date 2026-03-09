@@ -1,8 +1,8 @@
 package com.project.erp.controller;
 
 import com.project.erp.entity.Client;
-import org.springframework.web.bind.annotation.*;
 import com.project.erp.service.ClientService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +11,6 @@ import java.util.Optional;
 @RequestMapping("/clients")
 public class ClientController {
     private final ClientService clientService;
-
     public ClientController(ClientService clientService) {
         this.clientService = clientService;
     }

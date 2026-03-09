@@ -1,4 +1,4 @@
-package com.project.erp.entity.sales;
+package com.project.erp.enums;
 
 public enum SaleStatus {
     PENDING,

@@ -1,9 +1,6 @@
 package com.project.erp.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -17,5 +14,5 @@ public class Product {
     private String name;
     private String description;
     private BigDecimal price;
-    private Integer stock;
+    private Integer stock = 0;
 }

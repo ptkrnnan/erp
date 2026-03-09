@@ -1,7 +1,7 @@
-package com.project.erp.entity.sales;
+package com.project.erp.entity;
 
+import com.project.erp.enums.SaleStatus;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.project.erp.entity.Client;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -30,4 +30,5 @@ public class Sale {
     private SaleStatus status;
 
     private LocalDateTime date = LocalDateTime.now();
+
 }

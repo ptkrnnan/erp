@@ -1,9 +1,9 @@
 package com.project.erp.service;
 
-import org.springframework.stereotype.Service;
-
-import com.project.erp.repository.ClientRepository;
 import com.project.erp.entity.Client;
+import com.project.erp.repository.ClientRepository;
+
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;

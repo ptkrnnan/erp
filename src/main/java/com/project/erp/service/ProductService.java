@@ -2,6 +2,8 @@ package com.project.erp.service;
 
 import com.project.erp.entity.Product;
 import com.project.erp.repository.ProductRepository;
+import com.project.erp.dto.ProductDTO;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +17,14 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public Product createProduct(Product product) {
+    public Product createProduct(ProductDTO dto) {
+        Product product = new Product();
+
+        product.setName(dto.getName());
+        product.setDescription(dto.getDescription());
+        product.setPrice(dto.getPrice());
+
+        product.setStock(0);
         return productRepository.save(product);
     }
 
@@ -27,14 +36,13 @@ public class ProductService {
         return productRepository.findById(id);
     }
 
-    public Product updateProduct(Long id, Product product) {
+    public Product updateProduct(Long id, ProductDTO dto) {
         Product existing = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
 
-        existing.setName(product.getName());
-        existing.setDescription(product.getDescription());
-        existing.setPrice(product.getPrice());
-        existing.setStock(product.getStock());
+        existing.setName(dto.getName());
+        existing.setDescription(dto.getDescription());
+        existing.setPrice(dto.getPrice());
         return productRepository.save(existing);
     }
 

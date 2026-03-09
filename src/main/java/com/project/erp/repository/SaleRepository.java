@@ -1,6 +1,6 @@
-package com.project.erp.repository.sales;
+package com.project.erp.repository;
 
-import com.project.erp.entity.sales.Sale;
+import com.project.erp.entity.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SaleRepository extends JpaRepository<Sale, Long> {
